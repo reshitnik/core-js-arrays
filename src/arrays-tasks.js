@@ -47,18 +47,12 @@ function sumArrays(arr1, arr2) {
   const arrLen2 = arr2.length;
   let arr3 = [];
   if (arrLen1 >= arrLen2) {
-    arr3 = arr1.map(
-      // eslint-disable-next-line no-return-assign
-      (value, index) =>
-        // eslint-disable-next-line no-param-reassign, no-constant-condition
-        arr2[index] === undefined ? value : value + arr2[index]
+    arr3 = arr1.map((value, index) =>
+      arr2[index] === undefined ? value : value + arr2[index]
     );
   } else {
-    arr3 = arr2.map(
-      // eslint-disable-next-line no-return-assign
-      (value, index) =>
-        // eslint-disable-next-line no-param-reassign, no-constant-condition
-        arr1[index] === undefined ? value : value + arr1[index]
+    arr3 = arr2.map((value, index) =>
+      arr1[index] === undefined ? value : value + arr1[index]
     );
   }
   return arr3;
@@ -95,8 +89,7 @@ function findElement(arr, value) {
  *    findAllOccurrences([ true, 0, 1, 'true' ], true) => 1
  */
 function findAllOccurrences(arr, item) {
-  // eslint-disable-next-line func-names
-  const count = arr.reduce(function (accum, val) {
+  const count = arr.reduce(function sd(accum, val) {
     return accum + (val === item);
   }, 0);
   return count;
